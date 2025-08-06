@@ -122,7 +122,7 @@ export default createStore({
                 description: "Bantul (MAN 4 Bantul) – MAN 4 Bantul Yogyakarta (Manembayo) mengadakan kegiatan Rihlah Tarbawiyah bagi siswa kelas 10. Tujuannya adalah agar siswa dapat berwisata sambil belajar. Melalui rapat antara panitia Rihlah",
                 date: "08/16/2025",
                 icon: "/berita/berita.png",
-                category: "kemenag",
+                category: "media",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba Bapak Ibu diadakan untuk memeriahkan hari kemerdekaan RI ke-77 di SMAN 1 Kedungreja.

@@ -1,15 +1,16 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import { useStore } from "vuex";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 const store = useStore();
 const router = useRouter();
+const route = useRoute();
 
 const beritaAll = computed(() => store.getters.getBerita || []);
 const searchQuery = ref("");
 const sortOrder = ref(""); // "" (default), "desc", "asc"
-const categoryFilter = ref(""); // <-- tambahan filter kategori
+const categoryFilter = ref(route.query.category || ""); // awal ambil dari query
 
 const currentPage = ref(1);
 const perPage = 6;
@@ -22,6 +23,19 @@ const categories = [
   { label: "Berita Daerah", value: "daerah" },
   { label: "Berita Dunia Islam", value: "islam" },
 ];
+
+// Update kategori di URL ketika berubah dari dropdown
+watch(categoryFilter, (val) => {
+  router.push({ path: "/berita", query: { category: val } });
+});
+
+// Jika URL query berubah, update juga filter-nya
+watch(
+  () => route.query.category,
+  (val) => {
+    categoryFilter.value = val || "";
+  }
+);
 
 // Filtering + Sorting + Kategori
 const filteredSortedBerita = computed(() => {
@@ -38,18 +52,18 @@ const filteredSortedBerita = computed(() => {
     return matchQuery && matchCategory;
   });
 
-  filtered = filtered.slice(); // defensive copy
+  filtered = filtered.slice(); // copy defensif
 
   if (sortOrder.value === "desc") {
-    filtered.sort((a, b) => new Date(b.date) - new Date(a.date)); // Terbaru
+    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
   } else if (sortOrder.value === "asc") {
-    filtered.sort((a, b) => new Date(a.date) - new Date(b.date)); // Terlama
+    filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
   }
 
   return filtered;
 });
 
-// Pagination logic
+// Pagination
 const totalPages = computed(() =>
   Math.ceil(filteredSortedBerita.value.length / perPage)
 );
@@ -80,9 +94,7 @@ const setPage = (page) => {
     </h1>
 
     <!-- Search + Category + Sort -->
-    <div
-      class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6"
-    >
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
       <!-- Search -->
       <div class="w-full md:w-1/3 relative">
         <input

@@ -4,9 +4,7 @@ import { useStore } from "vuex";
 import DropdownMenu from "@/components/DropdownMenu.vue";
 
 const store = useStore();
-
 const menus = computed(() => store.getters.getNavbarMenus);
-
 const mobileMenuOpen = ref(false);
 
 const toggleMobileMenu = () => {
@@ -15,113 +13,111 @@ const toggleMobileMenu = () => {
 </script>
 
 <template>
-  <header class="bg-green-500 text-white shadow-md top-0 left-0 w-full z-40">
-    <div class="container mx-auto px-4 py-3">
-      <div class="flex justify-between items-center">
-        <!-- Logo + Nama -->
-        <div class="flex items-center space-x-4">
-          <div class="w-12 h-12">
-            <img
-              src="/logo-man.png"
-              alt="Logo Man 4 Bantul"
-              class="w-full h-full object-contain"
-            />
-          </div>
-          <div class="flex flex-col">
-            <h1 class="text-xl font-bold uppercase tracking-wider">
-              Madrasah Aliyah
-            </h1>
-            <div class="text-xs opacity-80">Negeri 4 Bantul Yogyakarta</div>
-          </div>
+  <header class="bg-green-500 text-white shadow-md w-full z-40">
+    <div class="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between">
+      <!-- Kiri: Logo + Nama Sekolah -->
+      <div class="flex items-center space-x-4">
+        <div class="w-12 h-12">
+          <img
+            src="/logo-man.png"
+            alt="Logo MAN 4 Bantul"
+            class="w-full h-full object-contain"
+          />
         </div>
+        <div class="flex flex-col leading-tight">
+          <h1 class="text-xl font-bold uppercase tracking-wide">
+            Madrasah Aliyah
+          </h1>
+          <p class="text-xs opacity-90">Negeri 4 Bantul Yogyakarta</p>
+        </div>
+      </div>
 
-        <!-- Menu Desktop -->
-        <nav class="hidden md:flex items-center space-x-6 relative">
-          <router-link
-            to="/"
-            class="hover:text-yellow-300 transition-colors duration-200"
-          >
-            Beranda
-          </router-link>
-
-          <DropdownMenu
-            label="Profil"
-            :items="menus.profileMenu"
-            path="/profil"
-          />
-          <router-link
-            to="/berita"
-            class="hover:text-yellow-300 transition-colors duration-200"
-          >
-            Berita
-          </router-link>
-          <DropdownMenu
-            label="Zona Integritas"
-            :items="menus.zonaMenu"
-            path="/zona"
-          />
-          <DropdownMenu
-            label="Layanan"
-            :items="menus.layananMenu"
-            path="/layanan"
-          />
-          <DropdownMenu
-            label="Galeri"
-            :items="menus.galeriMenu"
-            path="/galeri"
-          />
-        </nav>
-
-        <!-- Menu Mobile Button -->
-        <button
-          @click="toggleMobileMenu"
-          class="md:hidden text-2xl focus:outline-none"
+      <!-- Tengah: Menu Desktop -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <router-link
+          to="/"
+          class="hover:text-yellow-300 transition-colors duration-200"
         >
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
-      </div>
+          Beranda
+        </router-link>
 
-      <!-- Menu Mobile Dropdown -->
-      <div
-        v-if="mobileMenuOpen"
-        class="absolute left-0 right-0 mt-2 w-full bg-green-500 z-50 md:hidden"
+        <DropdownMenu
+          label="Profil"
+          :items="menus.profileMenu"
+          path="/profil"
+        />
+        <router-link
+          to="/berita"
+          class="hover:text-yellow-300 transition-colors duration-200"
+        >
+          Berita
+        </router-link>
+        <DropdownMenu
+          label="Zona Integritas"
+          :items="menus.zonaMenu"
+          path="/zona"
+        />
+        <DropdownMenu
+          label="Layanan"
+          :items="menus.layananMenu"
+          path="/layanan"
+        />
+        <DropdownMenu
+          label="Galeri"
+          :items="menus.galeriMenu"
+          path="/galeri"
+        />
+      </nav>
+
+      <!-- Kanan: Tombol Menu Mobile -->
+      <button
+        @click="toggleMobileMenu"
+        class="md:hidden text-2xl focus:outline-none"
       >
-        <nav class="flex flex-col space-y-1 px-4 py-3">
-          <router-link
-            to="/"
-            class="hover:text-yellow-300 transition-colors duration-200"
-          >
-            Beranda
-          </router-link>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
 
-          <DropdownMenu
-            label="Profil"
-            :items="menus.profileMenu"
-            path="/profil"
-          />
-          <router-link
-            to="/berita"
-            class="hover:text-yellow-300 transition-colors duration-200"
-          >
-            Berita
-          </router-link>
-          <DropdownMenu
-            label="Zona Integritas"
-            :items="menus.zonaMenu"
-            path="/zona-integritas"
-          />
-          <DropdownMenu
-            label="Layanan"
-            :items="menus.layananMenu"
-            path="/layanan"
-          />
-          <DropdownMenu
-            label="Galeri"
-            :items="menus.galeriMenu"
-            path="/galeri"
-          />
-        </nav>
-      </div>
+    <!-- Menu Mobile -->
+    <div
+      v-if="mobileMenuOpen"
+      class="md:hidden bg-green-500 w-full px-6 py-3"
+    >
+      <nav class="flex flex-col space-y-2">
+        <router-link
+          to="/"
+          class="hover:text-yellow-300 transition-colors duration-200"
+        >
+          Beranda
+        </router-link>
+
+        <DropdownMenu
+          label="Profil"
+          :items="menus.profileMenu"
+          path="/profil"
+        />
+        <router-link
+          to="/berita"
+          class="hover:text-yellow-300 transition-colors duration-200"
+        >
+          Berita
+        </router-link>
+        <DropdownMenu
+          label="Zona Integritas"
+          :items="menus.zonaMenu"
+          path="/zona-integritas"
+        />
+        <DropdownMenu
+          label="Layanan"
+          :items="menus.layananMenu"
+          path="/layanan"
+        />
+        <DropdownMenu
+          label="Galeri"
+          :items="menus.galeriMenu"
+          path="/galeri"
+        />
+      </nav>
     </div>
   </header>
 </template>

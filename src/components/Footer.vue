@@ -4,12 +4,12 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const goToLokasi = () => {
-  router.push({ path: "/lokasi" }); 
+  router.push({ path: "/lokasi" });
 };
 </script>
 
 <template>
-  <footer class="bg-green-500 text-white py-10 mt-12">
+  <footer class="bg-green-500 text-white py-10 mt-10">
     <div
       class="max-w-screen-xl mx-auto px-1 py-4 flex flex-wrap justify-between gap-4"
     >
@@ -50,7 +50,7 @@ const goToLokasi = () => {
         <!-- Profil Sekolah -->
         <div>
           <h3 class="text-xl font-bold mb-4">Profil Sekolah</h3>
-          <ul class="space-y-2">
+          <ul class="space-y-4">
             <li>
               <router-link to="/profil/sejarah" class="hover:text-yellow-300"
                 >Sejarah</router-link
@@ -83,22 +83,23 @@ const goToLokasi = () => {
           <h3 class="text-xl font-bold mb-4">Berita & Informasi</h3>
           <ul class="space-y-2">
             <li>
-              <router-link to="/berita/islam" class="hover:text-yellow-300"
-                >Berita Dunia Islam</router-link
+              <a href="/berita?category=islam" class="hover:text-yellow-300">
+                Berita Dunia Islam
+              </a>
+            </li>
+            <li>
+              <a href="/berita?category=media" class="hover:text-yellow-300">
+                Berita Nasional</a
+              >
+              
+            </li>
+            <li>
+              <a href="/berita?category=daerah" class="hover:text-yellow-300">
+                Berita Daerah</a
               >
             </li>
             <li>
-              <router-link to="/berita/nasional" class="hover:text-yellow-300"
-                >Berita Nasional</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/berita/daerah" class="hover:text-yellow-300"
-                >Berita Daerah</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/zona-integritas" class="hover:text-yellow-300"
+              <router-link to="/zona/integritas" class="hover:text-yellow-300"
                 >Aktivitas Zona Integritas</router-link
               >
             </li>
@@ -129,7 +130,7 @@ const goToLokasi = () => {
       </div>
 
       <!-- Copyright -->
-      <div class="w-full border-t border-white mt-14 pt-4 text-center text-sm">
+      <div class="w-full border-t border-white mt-14  pt-4 text-center text-sm">
         © Copyright MAN 4 Bantul Yogyakarta
       </div>
     </div>
