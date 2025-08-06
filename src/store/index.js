@@ -76,6 +76,7 @@ export default createStore({
                 description: "Bantul (MAN 4 Bantul) – MAN 4 Bantul Yogyakarta (Manembayo) mengadakan kegiatan Rihlah Tarbawiyah bagi siswa kelas 10. Tujuannya adalah agar siswa dapat berwisata sambil belajar. Melalui rapat antara panitia Rihlah",
                 date: "08/16/2025",
                 icon: "/berita/berita.png",
+                category: "media",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba Bapak Ibu diadakan untuk memeriahkan hari kemerdekaan RI ke-77 di SMAN 1 Kedungreja.
@@ -98,6 +99,7 @@ export default createStore({
                 description: "Jelang Pembagian Raport, MAN 4 Bantul Gelar Rapat Koordinasi Matangkan Strategi Akhir Semester   Bantul (MAN 4 Bantul) — Dalam upaya memastikan kelancaran agenda",
                 date: "08/16/2025",
                 icon: "/berita/berita1.png",
+                category: "kemenag",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba Bapak Ibu diadakan untuk memeriahkan hari kemerdekaan RI ke-77 di SMAN 1 Kedungreja.
@@ -120,6 +122,7 @@ export default createStore({
                 description: "Bantul (MAN 4 Bantul) – MAN 4 Bantul Yogyakarta (Manembayo) mengadakan kegiatan Rihlah Tarbawiyah bagi siswa kelas 10. Tujuannya adalah agar siswa dapat berwisata sambil belajar. Melalui rapat antara panitia Rihlah",
                 date: "08/16/2025",
                 icon: "/berita/berita.png",
+                category: "kemenag",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba Bapak Ibu diadakan untuk memeriahkan hari kemerdekaan RI ke-77 di SMAN 1 Kedungreja.
@@ -142,6 +145,7 @@ export default createStore({
                 description: "Bantul (MAN 4 Bantul) – MAN 4 Bantul Yogyakarta (Manembayo) mengadakan kegiatan Rihlah Tarbawiyah bagi siswa kelas 10. Tujuannya adalah agar siswa dapat berwisata sambil belajar. Melalui rapat antara panitia Rihlah",
                 date: "08/16/2022",
                 icon: "/berita/berita.png",
+                category: "daerah",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba Bapak Ibu diadakan untuk memeriahkan hari kemerdekaan RI ke-77 di SMAN 1 Kedungreja.
@@ -164,6 +168,7 @@ export default createStore({
                 description: "Jelang Pembagian Raport, MAN 4 Bantul Gelar Rapat Koordinasi Matangkan Strategi Akhir Semester   Bantul (MAN 4 Bantul) — Dalam upaya memastikan kelancaran agenda",
                 date: "08/16/2022",
                 icon: "/berita/berita1.png",
+                category: "daerah",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba pakaian daur ulang di SMAN 1 Kedungreja diselenggarakan sebagai bagian dari kampanye kesadaran lingkungan dan peningkatan kreativitas siswa. Kegiatan ini bertujuan untuk menanamkan nilai kepedulian terhadap sampah dan pentingnya pemanfaatan kembali barang bekas menjadi sesuatu yang bernilai guna. Para siswa diajak untuk berpikir kritis dan inovatif dalam mengubah limbah menjadi karya seni dalam bentuk busana.
@@ -186,6 +191,7 @@ export default createStore({
                 description: "TEMPO.CO, Jakarta - Potongan besar roket bekas pakai milik Cina yang jatuh kembali ke Bumi pada Sabtu malam lalu memberi pemandangan memukau (kalau tidak mengerikan) saat menembus atmosfer. Bagian inti dari Roket Long March 5B",
                 date: "08/16/2022",
                 icon: "/berita/berita1.png",
+                category: "islam",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba pakaian daur ulang di SMAN 1 Kedungreja diselenggarakan sebagai bagian dari kampanye kesadaran lingkungan dan peningkatan kreativitas siswa. Kegiatan ini bertujuan untuk menanamkan nilai kepedulian terhadap sampah dan pentingnya pemanfaatan kembali barang bekas menjadi sesuatu yang bernilai guna. Para siswa diajak untuk berpikir kritis dan inovatif dalam mengubah limbah menjadi karya seni dalam bentuk busana.

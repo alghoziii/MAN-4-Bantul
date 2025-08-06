@@ -53,7 +53,7 @@ const closeZoom = () => {
       type="button"
     >
       <i class="fas fa-arrow-left"></i>
-      Kembali ke Daftar prestasi
+      Kembali ke Daftar Foto Peristiwa
     </button>
     <h1 class="text-3xl font-bold text-green-500 mb-6">
       {{ album?.title }}

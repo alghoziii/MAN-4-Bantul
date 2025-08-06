@@ -9,21 +9,36 @@ const router = useRouter();
 const beritaAll = computed(() => store.getters.getBerita || []);
 const searchQuery = ref("");
 const sortOrder = ref(""); // "" (default), "desc", "asc"
+const categoryFilter = ref(""); // <-- tambahan filter kategori
 
 const currentPage = ref(1);
 const perPage = 6;
 
-// Filtering + Sorting
+// Daftar kategori
+const categories = [
+  { label: "Semua Berita", value: "" },
+  { label: "Berita Media Nasional", value: "media" },
+  { label: "Berita Kemenag", value: "kemenag" },
+  { label: "Berita Daerah", value: "daerah" },
+  { label: "Berita Dunia Islam", value: "islam" },
+];
+
+// Filtering + Sorting + Kategori
 const filteredSortedBerita = computed(() => {
   const query = searchQuery.value.toLowerCase().trim();
 
-  let filtered = beritaAll.value.filter(
-    (item) =>
+  let filtered = beritaAll.value.filter((item) => {
+    const matchQuery =
       item.title?.toLowerCase().includes(query) ||
-      item.description?.toLowerCase().includes(query)
-  );
+      item.description?.toLowerCase().includes(query);
 
-  filtered = filtered.slice(); // defensif
+    const matchCategory =
+      !categoryFilter.value || item.category === categoryFilter.value;
+
+    return matchQuery && matchCategory;
+  });
+
+  filtered = filtered.slice(); // defensive copy
 
   if (sortOrder.value === "desc") {
     filtered.sort((a, b) => new Date(b.date) - new Date(a.date)); // Terbaru
@@ -64,33 +79,37 @@ const setPage = (page) => {
       <span class="text-green-500">MADRASAH</span>
     </h1>
 
-    <!-- Search & Sort -->
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+    <!-- Search + Category + Sort -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6"
+    >
+      <!-- Search -->
       <div class="w-full md:w-1/3 relative">
         <input
           v-model="searchQuery"
           type="text"
           placeholder="Cari Seputar Berita"
-          class="w-full border border-gray-300 rounded-full py-2 pl-4 pr-10 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full border border-gray-300 rounded-full py-2 pl-4 pr-10 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
         />
         <span class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400">
           <i class="fas fa-search"></i>
         </span>
       </div>
 
+      <!-- Category Filter -->
       <div class="w-full md:w-auto">
         <select
-          v-model="sortOrder"
-          class="border border-gray-300 rounded-full py-2 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          v-model="categoryFilter"
+          class="border border-gray-300 rounded-full py-2 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
         >
-          <option value="">Urutkan Dari</option>
-          <option value="desc">Terbaru</option>
-          <option value="asc">Terlama</option>
+          <option v-for="cat in categories" :key="cat.value" :value="cat.value">
+            {{ cat.label }}
+          </option>
         </select>
       </div>
     </div>
 
-    <!-- Grid -->
+    <!-- Grid Berita -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
       <div
         v-for="(item, idx) in paginatedBerita"

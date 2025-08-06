@@ -23,6 +23,7 @@ import FotoPeristiwa from '@/views/galleri/FotoPeristiwa.vue'
 import FotoPeristiwaDetail from '@/views/galleri/FotoPeristiwaDetail.vue'
 import VideoDetail from '@/views/galleri/VideoDetail.vue'
 import Video from '@/views/galleri/Video.vue'
+import LokasiView from '@/views/lokasi/LokasiView.vue'
 
 const routes = [
     {
@@ -93,6 +94,11 @@ const routes = [
                 name: 'berita_detail',
                 component: BeritaDetail,
                 props: true,
+            },
+            {
+                path: 'lokasi',
+                name: 'lokasi',
+                component: LokasiView,
             },
             {
                 path: '/zona',
