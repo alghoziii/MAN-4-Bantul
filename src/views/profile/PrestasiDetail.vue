@@ -9,7 +9,9 @@ const router = useRouter();
 
 const index = Number(route.params.index);
 // Ambil detail prestasi dari store berdasarkan index
-const prestasi = computed(() => store.getters.getPrestasi[index]);
+const prestasi = computed(
+  () => store.getters.getProfileContent.prestasi[index]
+);
 
 const goBack = () => {
   router.push({ name: "prestasi" });
@@ -34,8 +36,9 @@ const goBack = () => {
       <img
         :src="prestasi.image"
         :alt="prestasi.title"
-        class="w-full h-74 md:h-90 object-cover rounded-lg"
+        class="w-full h-auto max-h-[500px] object-cover rounded-lg"
       />
+
       <p class="text-xs text-gray-600 mt-2 font-medium text-center">
         {{ prestasi.description }}
       </p>

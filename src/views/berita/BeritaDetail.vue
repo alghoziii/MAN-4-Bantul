@@ -20,7 +20,7 @@ const goBack = () => {
   <div class="container mx-auto px-1 py-6 max-w-4xl">
     <button
       @click="goBack"
-      class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 mb-6"
+      class="flex items-center gap-2 bg-green-500 hover:bg-yellow-300 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 mb-6"
       type="button"
     >
       <i class="fas fa-arrow-left"></i>

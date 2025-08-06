@@ -3,7 +3,7 @@ import { useStore } from 'vuex';
 import { computed } from 'vue';
 
 const store = useStore();
-const deskripsi = computed(() => store.getters.getSejarahDeskripsi);
+const deskripsi = computed(() => store.getters.getProfileContent.sejarah.sejarahDeskripsi);
 </script>
 
 <template>

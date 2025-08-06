@@ -6,23 +6,48 @@ import { useRouter } from "vue-router";
 const store = useStore();
 const router = useRouter();
 
-const berita = computed(() => store.getters.getBerita);
+const beritaAll = computed(() => store.getters.getBerita || []);
+const searchQuery = ref("");
+const sortOrder = ref(""); // "" (default), "desc", "asc"
 
-// Pagination state
 const currentPage = ref(1);
-const perPage = 6; // tampilkan 6 berita per halaman
+const perPage = 6;
 
-const totalPages = computed(() => Math.ceil(berita.value.length / perPage));
+// Filtering + Sorting
+const filteredSortedBerita = computed(() => {
+  const query = searchQuery.value.toLowerCase().trim();
+
+  let filtered = beritaAll.value.filter(
+    (item) =>
+      item.title?.toLowerCase().includes(query) ||
+      item.description?.toLowerCase().includes(query)
+  );
+
+  filtered = filtered.slice(); // defensif
+
+  if (sortOrder.value === "desc") {
+    filtered.sort((a, b) => new Date(b.date) - new Date(a.date)); // Terbaru
+  } else if (sortOrder.value === "asc") {
+    filtered.sort((a, b) => new Date(a.date) - new Date(b.date)); // Terlama
+  }
+
+  return filtered;
+});
+
+// Pagination logic
+const totalPages = computed(() =>
+  Math.ceil(filteredSortedBerita.value.length / perPage)
+);
 
 const paginatedBerita = computed(() =>
-  berita.value.slice(
+  filteredSortedBerita.value.slice(
     (currentPage.value - 1) * perPage,
     currentPage.value * perPage
   )
 );
 
+// Navigate
 const goToDetail = (index) => {
-  // Cari index asli di berita (karena berita di halaman bisa slice)
   const beritaIndex = (currentPage.value - 1) * perPage + index;
   router.push({ name: "berita_detail", params: { index: beritaIndex } });
 };
@@ -34,9 +59,38 @@ const setPage = (page) => {
 
 <template>
   <div class="container mx-auto px-6 py-8">
-    <h1 class="text-2xl md:text-3xl font-bold mb-6 text-blue-800">
-      Berita Seputar SMAN 1 Kedungreja
+    <h1 class="text-2xl md:text-3xl font-bold mb-6 text-center">
+      <span class="text-black">BERITA SEPUTAR </span>
+      <span class="text-green-500">MADRASAH</span>
     </h1>
+
+    <!-- Search & Sort -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+      <div class="w-full md:w-1/3 relative">
+        <input
+          v-model="searchQuery"
+          type="text"
+          placeholder="Cari Seputar Berita"
+          class="w-full border border-gray-300 rounded-full py-2 pl-4 pr-10 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+
+      <div class="w-full md:w-auto">
+        <select
+          v-model="sortOrder"
+          class="border border-gray-300 rounded-full py-2 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="">Urutkan Dari</option>
+          <option value="desc">Terbaru</option>
+          <option value="asc">Terlama</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
       <div
         v-for="(item, idx) in paginatedBerita"
@@ -46,25 +100,42 @@ const setPage = (page) => {
         <img
           :src="item.icon"
           alt="Berita Icon"
-          class="w-full h-60 object-cover rounded mb-3"
+          class="w-full aspect-[16/9] object-cover rounded mb-3"
         />
         <div class="flex-1 flex flex-col">
+          <p class="text-xs text-gray-400 mb-3">
+            {{
+              new Date(item.date).toLocaleDateString("id-ID", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            }}
+          </p>
           <h3 class="text-base font-semibold mb-2">{{ item.title }}</h3>
           <p class="text-sm text-gray-600 flex-1 mb-2">
             {{ item.description }}
           </p>
-          <p class="text-xs text-gray-400 mb-3">{{ item.date }}</p>
           <button
             @click="goToDetail(idx)"
-            class="mt-auto bg-blue-800 text-white text-sm py-2 w-full rounded hover:bg-blue-700 transition"
+            class="mt-auto text-sm font-semibold py-2 px-4 border border-green-500 text-green-500 rounded hover:bg-green-500 hover:text-white transition"
           >
             Lihat Berita
           </button>
         </div>
       </div>
     </div>
+
+    <div
+      v-if="filteredSortedBerita.length === 0"
+      class="text-center py-16 text-gray-500 text-sm"
+    >
+      Tidak ditemukan hasil untuk: <strong>{{ searchQuery }}</strong>
+    </div>
+
     <!-- Pagination -->
-    <div class="flex justify-center space-x-2">
+    <div class="flex justify-center space-x-2 mt-6" v-if="totalPages > 1">
       <button
         class="px-3 py-1 rounded border text-gray-700"
         :class="{ 'bg-gray-200': currentPage === 1 }"
@@ -73,18 +144,20 @@ const setPage = (page) => {
       >
         <i class="fas fa-chevron-left"></i>
       </button>
+
       <button
         v-for="page in totalPages"
         :key="page"
         class="px-3 py-1 rounded border"
         :class="{
-          'bg-blue-600 text-white': currentPage === page,
+          'bg-green-500 text-white': currentPage === page,
           'bg-white text-gray-700': currentPage !== page,
         }"
         @click="setPage(page)"
       >
         {{ page }}
       </button>
+
       <button
         class="px-3 py-1 rounded border text-gray-700"
         :class="{ 'bg-gray-200': currentPage === totalPages }"

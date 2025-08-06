@@ -35,7 +35,7 @@ const toggleMobileMenu = () => {
           </div>
         </div>
 
-       <!-- Menu Desktop -->
+        <!-- Menu Desktop -->
         <nav class="hidden md:flex items-center space-x-6 relative">
           <router-link
             to="/"
@@ -44,16 +44,32 @@ const toggleMobileMenu = () => {
             Beranda
           </router-link>
 
-          <DropdownMenu label="Profil" :items="menus.profileMenu" path="/profil" />
+          <DropdownMenu
+            label="Profil"
+            :items="menus.profileMenu"
+            path="/profil"
+          />
           <router-link
             to="/berita"
             class="hover:text-yellow-300 transition-colors duration-200"
           >
             Berita
           </router-link>
-          <DropdownMenu label="Zona Integritas" :items="menus.zonaMenu" path="/zona-integritas" />
-          <DropdownMenu label="Layanan" :items="menus.layananMenu" path="/layanan" />
-          <DropdownMenu label="Galeri" :items="menus.galeriMenu" path="/galeri" />
+          <DropdownMenu
+            label="Zona Integritas"
+            :items="menus.zonaMenu"
+            path="/zona"
+          />
+          <DropdownMenu
+            label="Layanan"
+            :items="menus.layananMenu"
+            path="/layanan"
+          />
+          <DropdownMenu
+            label="Galeri"
+            :items="menus.galeriMenu"
+            path="/galeri"
+          />
         </nav>
 
         <!-- Menu Mobile Button -->
@@ -78,16 +94,32 @@ const toggleMobileMenu = () => {
             Beranda
           </router-link>
 
-          <DropdownMenu label="Profil" :items="menus.profileMenu" path="/profil" />
+          <DropdownMenu
+            label="Profil"
+            :items="menus.profileMenu"
+            path="/profil"
+          />
           <router-link
             to="/berita"
             class="hover:text-yellow-300 transition-colors duration-200"
           >
             Berita
           </router-link>
-          <DropdownMenu label="Zona Integritas" :items="menus.zonaMenu" path="/zona-integritas" />
-          <DropdownMenu label="Layanan" :items="menus.layananMenu" path="/layanan" />
-          <DropdownMenu label="Galeri" :items="menus.galeriMenu" path="/galeri" />
+          <DropdownMenu
+            label="Zona Integritas"
+            :items="menus.zonaMenu"
+            path="/zona-integritas"
+          />
+          <DropdownMenu
+            label="Layanan"
+            :items="menus.layananMenu"
+            path="/layanan"
+          />
+          <DropdownMenu
+            label="Galeri"
+            :items="menus.galeriMenu"
+            path="/galeri"
+          />
         </nav>
       </div>
     </div>

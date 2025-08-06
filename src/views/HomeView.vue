@@ -14,7 +14,8 @@ export default {
     const slides = computed(() => store.getters.getSlides);
     const berita = computed(() => store.getters.getBerita || []);
     const sambutan = computed(() => store.getters.getSambutan);
-    const prestasi = computed(() => store.getters.getPrestasi);
+    const prestasi = computed(() => store.getters.getProfileContent.prestasi);
+    // const prestasiAll = computed(() => store.getters.getProfileContent.getPrestasi);
 
     const artikel = computed(() => store.getters.getArtikel || []);
     const galeriCarousel = computed(() => store.getters.getGaleriCarousel);
@@ -265,7 +266,7 @@ export default {
           <span class="text-sm text-gray-500 mb-4">{{ item.date }}</span>
           <p class="text-gray-700 mb-6 flex-1">{{ item.description }}</p>
           <button
-            class="border border-black rounded-lg py-2 font-semibold bg-white hover:bg-green-500 hover:text-white transition-colors"
+            class="border border-green-500 rounded-lg py-2  bg-white hover:bg-green-500 hover:text-white transition-colors"
             @click.stop="goToDetailBerita(index)"
           >
             Lihat Selengkapnya
@@ -300,7 +301,7 @@ export default {
             {{ item.title }}
           </h3>
           <button
-            class="mt-auto border border-black rounded-lg py-2 font-semibold bg-white hover:bg-green-500 hover:text-white transition-colors"
+            class="mt-auto border border-green-500 rounded-lg py-2  bg-white hover:bg-green-500 hover:text-white transition-colors"
             @click.stop="goToDetailPrestasi(index)"
           >
             Lihat Selengkapnya

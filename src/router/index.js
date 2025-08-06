@@ -35,6 +35,17 @@ import Berita from '@/views/berita/Berita.vue'
 import BeritaDetail from '@/views/berita/BeritaDetail.vue'
 import Prestasi from '@/views/profile/Prestasi.vue'
 import PrestasiDetail from '@/views/profile/PrestasiDetail.vue'
+import ZonaView from '@/views/ZonaView.vue'
+import Integritas from '@/views/zona/Integritas.vue'
+import IntegritasDetail from '@/views/zona/IntegritasDetail.vue'
+import Evidencezona from '@/views/zona/Evidencezona.vue'
+import BudayaKerja from '@/views/zona/BudayaKerja.vue'
+import Standarlayanan from '@/views/layanan/Standarlayanan.vue'
+import GaleriView from '@/views/GaleriView.vue'
+import FotoPeristiwa from '@/views/galleri/FotoPeristiwa.vue'
+import FotoPeristiwaDetail from '@/views/galleri/FotoPeristiwaDetail.vue'
+import VideoDetail from '@/views/galleri/VideoDetail.vue'
+import Video from '@/views/galleri/Video.vue'
 
 const routes = [
     {
@@ -77,8 +88,8 @@ const routes = [
                         component: Struktur_Organisasi
                     },
                     {
-                        path: "warga_madrasah",
-                        name: "warga_madrasah",
+                        path: "warga-madrasah",
+                        name: "warga-madrasah",
                         component: WargaMadrasah
                     },
                     {
@@ -106,138 +117,65 @@ const routes = [
                 component: BeritaDetail,
                 props: true,
             },
-            // {
-            //     path: '/guru',
-            //     name: 'guru',
-            //     component: GuruView,
-            //     children: [
-            //         {
-            //             path: 'direktori_guru',
-            //             name: 'direktori_guru',
-            //             component: DirektoriGuru
-            //         },
-            //         {
-            //             path: 'direktori_guru_detail/:id',
-            //             name: 'direktori_guru_detail',
-            //             component: DirektoriGuruDetail,
-            //             props: true,
-
-            //         },
-            //         {
-            //             path: 'kalender',
-            //             name: 'kalender',
-            //             component: Kalender,
-            //         },
-
-            //     ]
-            // },
-            // {
-            //     path: '/siswa',
-            //     name: 'siswa',
-            //     component: SiswaView,
-            //     children: [
-            //         {
-            //             path: 'direktori_siswa',
-            //             name: 'direktori_siswa',
-            //             component: DirektoriSiswa
-            //         },
-            //         {
-            //             path: 'direktori_siswa_detail/:id',
-            //             name: 'direktori_siswa_detail',
-            //             component: DirektoriSiswaDetail,
-            //             props: true,
-            //         },
-            //         {
-            //             path: 'ekstrakulikuler',
-            //             name: 'ekstrakulikuler',
-            //             component: Ekstrakulikuler
-            //         },
-            //         {
-            //             path: 'osis',
-            //             name: 'osis',
-            //             component: Osis
-            //         },
-            //         {
-            //             path: 'direktori_alumni',
-            //             name: 'direktori_alumni',
-            //             component: DirektoriAlumni
-            //         },
-            //         {
-            //             path: 'direktori_siswa_alumni_detail/:id',
-            //             name: 'direktori_siswa_alumni_detail',
-            //             component: DirektoriAlumniDetail,
-            //             props: true,
-            //         },
-            //     ]
-            // },
-            // {
-            //     path: '/informasi',
-            //     name: 'informasi',
-            //     component: Informasi,
-            //     children: [
-            //         {
-            //             path: 'kontak_sekolah',
-            //             name: 'kontak_sekolah',
-            //             component: KontakSekolah,
-            //         },
-            //         {
-            //             path: 'agenda',
-            //             name: 'agenda',
-            //             component: Agenda,
-            //         },
-            //         {
-            //             path: 'berita',
-            //             name: 'berita',
-            //             component: Berita,
-            //         },
-            //         {
-            //             path: '/berita/:index',
-            //             name: 'berita_detail',
-            //             component: BeritaDetail,
-            //             props: true,
-            //         },
-            //         {
-            //             path: 'artikel',
-            //             name: 'artikel',
-            //             component: Artikel,
-            //         },
-            //         {
-            //             path: "prestasi",
-            //             name: "prestasi",
-            //             component: Prestasi
-            //         },
-
-            //     ]
-            // },
-            // {
-            //     path: '/galeri',
-            //     name: 'galeri',
-            //     component: Galeri,
-            //     children: [
-            //         {
-            //             path: 'galeri_video',
-            //             name: 'galeri_video',
-            //             component: GaleriVideo
-            //         },
-            //         {
-            //             path: 'video_detail/:id',
-            //             name: 'video_detail',
-            //             component: GaleriVideoDetail
-            //         },
-            //         {
-            //             path: 'galeri_foto',
-            //             name: 'galeri_foto',
-            //             component: GaleriFoto,
-            //         },
-            //         {
-            //             path: 'galeri_foto_detail/:id',
-            //             name: 'galeri_foto_detail',
-            //             component: GaleriFotoDetail,
-            //         },
-            //     ]
-            // },
-
-
+            {
+                path: '/zona',
+                name: 'zona',
+                component: ZonaView,
+                children: [
+                    {
+                        path: "integritas",
+                        name: "integritas",
+                        component: Integritas
+                    },
+                    {
+                        path: "integritas:index",
+                        name: "integritas_detail",
+                        component: IntegritasDetail
+                    },
+                    {
+                        path: "evidencezona",
+                        name: "evidencezona",
+                        component: Evidencezona
+                    },
+                    {
+                        path: "budaya-kerja",
+                        name: "budaya-kerja",
+                        component: BudayaKerja
+                    },
+                ]
+            },
+            {
+                path: 'layanan',
+                name: 'layanan',
+                component: Standarlayanan,
+            },
+            {
+                path: '/galeri',
+                name: 'galeri',
+                component: GaleriView,
+                children: [
+                    {
+                        path: 'foto_peristiwa',
+                        name: 'foto_peristiwa',
+                        component: FotoPeristiwa,
+                    },
+                    {
+                        path: 'foto_peristiwa_detail/:id',
+                        name: 'foto_peristiwa_detail',
+                        component: FotoPeristiwaDetail,
+                    },
+                    {
+                        path: 'video',
+                        name: 'video',
+                        component: Video
+                    },
+                    {
+                        path: 'video_detail/:id',
+                        name: 'video_detail',
+                        component: VideoDetail
+                    },
+                ]
+            },
 
 
         ]

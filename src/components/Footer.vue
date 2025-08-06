@@ -25,7 +25,7 @@
             target="_blank"
             class="inline-flex items-center mt-4 bg-white text-green-700 font-semibold px-4 py-2 rounded-md shadow-md hover:bg-green-100 transition"
           >
-            Lokasi Sekolah <i class="fa fa-map-marker ml-2"> </i>
+            Lokasi Sekolah <i class="fa-solid fa-location-dot ml-2"> </i>
           </a>
         </div>
       </div>
