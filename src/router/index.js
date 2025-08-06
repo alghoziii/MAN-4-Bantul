@@ -5,29 +5,6 @@ import ProfileView from '@/views/ProfileView.vue'
 import VisiMisiView from '@/views/profile/VisiMisiView.vue'
 import Sejarah from '@/views/profile/Sejarah.vue'
 import Struktur_Organisasi from '@/views/profile/Struktur_Organisasi.vue'
-// import DirektoriGuru from '@/views/guru/DirektoriGuru.vue'
-// import GuruView from '@/views/GuruView.vue'
-// import DirektoriGuruDetail from '@/views/guru/DirektoriGuruDetail.vue'
-// import Kalender from '@/views/guru/Kalender.vue'
-// import SiswaView from '@/views/SiswaView.vue'
-// import DirektoriSiswa from '@/views/siswa/DirektoriSiswa.vue'
-// import DirektoriSiswaDetail from '@/views/siswa/DirektoriSiswaDetail.vue'
-// import Informasi from '@/views/Informasi.vue'
-// import KontakSekolah from '@/views/informasi/KontakSekolah.vue'
-// import Agenda from '@/views/informasi/Agenda.vue'
-// import Berita from '@/views/informasi/Berita.vue'
-// import Galeri from '@/views/Galeri.vue'
-// import GaleriVideo from '@/views/galleri/GaleriVideo.vue'
-// import GaleriFoto from '@/views/galleri/GaleriFoto.vue'
-// import GaleriVideoDetail from '@/views/galleri/GaleriVideoDetail.vue'
-// import GaleriFotoDetail from '@/views/galleri/GaleriFotoDetail.vue'
-// import BeritaDetail from '@/views/informasi/BeritaDetail.vue'
-// import Ekstrakulikuler from '@/views/siswa/Ekstrakulikuler.vue'
-// import Osis from '@/views/siswa/Osis.vue'
-// import DirektoriAlumni from '@/views/siswa/DirektoriAlumni.vue'
-// import DirektoriAlumniDetail from '@/views/siswa/DirektoriAlumniDetail.vue'
-// import Prestasi from '@/views/informasi/Prestasi.vue'
-// import Artikel from '@/views/informasi/Artikel.vue'
 import Tujuan from '@/views/profile/Tujuan.vue'
 import WargaMadrasah from '@/views/profile/WargaMadrasah.vue'
 import TargetStrategi from '@/views/profile/TargetStrategi.vue'
@@ -184,11 +161,7 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
-    routes,
-    scrollBehavior(to, from, savedPosition) {
-        // selalu scroll ke atas saat navigasi
-        return { top: 0 }
-    }
+    routes
 })
 
 export default router

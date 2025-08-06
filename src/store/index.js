@@ -94,10 +94,10 @@ export default createStore({
                   `,
             },
             {
-                title: "MAN 4 Bantul Syaratkan Siswanya Membuat Proposal Penelitian Saat Mengikuti Rihlah Tarbawiyah",
-                description: "Bantul (MAN 4 Bantul) – MAN 4 Bantul Yogyakarta (Manembayo) mengadakan kegiatan Rihlah Tarbawiyah bagi siswa kelas 10. Tujuannya adalah agar siswa dapat berwisata sambil belajar. Melalui rapat antara panitia Rihlah",
+                title: "WORKSHOP PENDAMPINGAN IMPLEMENTASI PENILAIAN MADRASAH DAN PENERAPAN KURIKULUM MERDEKA",
+                description: "Jelang Pembagian Raport, MAN 4 Bantul Gelar Rapat Koordinasi Matangkan Strategi Akhir Semester   Bantul (MAN 4 Bantul) — Dalam upaya memastikan kelancaran agenda",
                 date: "08/16/2025",
-                icon: "/berita/berita.png",
+                icon: "/berita/berita1.png",
                 content: `
                     <p style="text-align: justify; margin-bottom: 16px;">
                       Lomba Bapak Ibu diadakan untuk memeriahkan hari kemerdekaan RI ke-77 di SMAN 1 Kedungreja.
@@ -203,28 +203,7 @@ export default createStore({
                     </p>
                   `,
             },
-            {
-                title: "Pemandangan Roket Long March 5B Cina yang Jatuh Liar ke Bumi",
-                description: "TEMPO.CO, Jakarta - Potongan besar roket bekas pakai milik Cina yang jatuh kembali ke Bumi pada Sabtu malam lalu memberi pemandangan memukau (kalau tidak mengerikan) saat menembus atmosfer. Bagian inti dari Roket Long March 5B",
-                date: "08/16/2022",
-                icon: "/berita/berita1.png",
-                content: `
-                    <p style="text-align: justify; margin-bottom: 16px;">
-                      Lomba pakaian daur ulang di SMAN 1 Kedungreja diselenggarakan sebagai bagian dari kampanye kesadaran lingkungan dan peningkatan kreativitas siswa. Kegiatan ini bertujuan untuk menanamkan nilai kepedulian terhadap sampah dan pentingnya pemanfaatan kembali barang bekas menjadi sesuatu yang bernilai guna. Para siswa diajak untuk berpikir kritis dan inovatif dalam mengubah limbah menjadi karya seni dalam bentuk busana.
-                    </p>
 
-                    <p style="text-align: justify; margin-bottom: 16px;">
-                    Sebelum hari pelaksanaan, siswa diberi waktu untuk merancang dan membuat pakaian dari berbagai bahan bekas seperti plastik, kertas koran, kardus, hingga kantong kresek. Proses ini melibatkan kerja sama tim antar kelas serta bimbingan dari guru pendamping. Seluruh rancangan dikerjakan dengan penuh antusiasme dan ide-ide unik yang mencerminkan karakter serta pesan moral dari tiap kelompok.
-                    </p>
-
-                    <p style="text-align: justify; margin-bottom: 16px;">
-                    Pada hari lomba, para peserta tampil percaya diri dalam parade busana daur ulang yang diselenggarakan di lapangan sekolah. Tiap siswa berjalan di "catwalk" sederhana yang telah disiapkan, sambil memperagakan pakaian hasil kreasi mereka. Sorak sorai dari siswa lainnya turut memeriahkan acara, menciptakan suasana kompetitif namun tetap menyenangkan. Dewan juri menilai dari aspek kreativitas, ketepatan tema, dan presentasi.
-                    </p>
-                    <p style="text-align: justify; margin-bottom: 16px;">
-                    Melalui kegiatan ini, siswa tidak hanya belajar tentang pentingnya menjaga lingkungan, tetapi juga tentang nilai kerja keras, kolaborasi, dan keberanian tampil di depan umum. Harapannya, lomba ini dapat menjadi inspirasi bagi siswa untuk terus peduli terhadap isu lingkungan sekaligus mengasah kemampuan berpikir kreatif dalam menghadapi tantangan global masa depan.
-                    </p>
-                  `,
-            },
 
         ],
 
@@ -889,547 +868,72 @@ export default createStore({
                 {
                     id: 1,
                     date: "08/16/2025",
-                    title: "Galeri 2022",
+                    title: "Upacara HUT ke -78 RI Madrasah",
                     photoCount: 3,
                     photos: ["/galeri/galeri1.jpg", "/galeri/galeri2.jpg", "/galeri/galeri3.jpg"],
                 },
                 {
                     id: 2,
-                    date: "08/16/2025",
-                    title: "Twibbon",
+                    date: "08/16/2024",
+                    title: "Perkenalan Tamu Ambalan 2023",
                     photoCount: 3,
                     photos: ["/galeri/galeri2.jpg", "/galeri/galeri1.jpg", "/galeri/galeri3.jpg"],
                 },
                 {
                     id: 3,
-                    date: "08/16/2025",
-                    title: "Semarak Peringatan HUT RI Ke-75",
+                    date: "08/16/2023",
+                    title: "Lomba Perkemahan Penegak Pramuka 2023",
                     photoCount: 3,
                     photos: ["/galeri/galeri3.jpg", "/galeri/galeri2.jpg", "/galeri/galeri1.jpg"],
                 },
                 {
                     id: 4,
                     date: "08/16/2023",
-                    title: "Semarak Peringatan HUT RI Ke-75",
+                    title: "Wisata Ilimiah Kelas XI Pacitan Jawa Timur",
                     photoCount: 8,
                     photos: ["/galeri/galeri4.jpg", "/galeri/galeri1.jpg", "/galeri/galeri3.jpg"],
+                },
+                {
+                    id: 5,
+                    date: "08/16/2023",
+                    title: "Milad Man 4 Bantul Ke-54",
+                    photoCount: 8,
+                    photos: ["/galeri/galeri5.jpg", "/galeri/galeri1.jpg", "/galeri/galeri3.jpg"],
+                },
+                {
+                    id: 6,
+                    date: "08/16/2023",
+                    title: "Classmeeting Siswa Semester Ganjil Tahun Ajaran 2022/2023",
+                    photoCount: 8,
+                    photos: ["/galeri/galeri6.jpg", "/galeri/galeri1.jpg", "/galeri/galeri3.jpg"],
                 },
             ],
             videos: [
                 {
                     id: 1,
-                    title: "Selamat Hari Guru 2017 SMANKER Jaya",
+                    title: "WISUDA PURNA SISWA",
                     date: "07-03-2024",
-                    thumbnail: "/video4.png",
-                    videoUrl: "https://www.youtube.com/watch?v=OaNdJqPCegA&t=1s",
+                    thumbnail: ["/galeri/video1.jpeg",],
+                    videoUrl: ["https://www.youtube.com/live/UfZ68eJ692k?si=mxmDmCivVd5IDZpM", "https://www.youtube.com/live/psO3yrrz1rY?si=X7sQJB3T73lsHv5x"],
                 },
                 {
                     id: 2,
-                    title: "Upacara Peringatan Hari Guru",
+                    title: "Video Edukasi Kepada Siswa",
                     date: "07-03-2023",
-                    thumbnail: "/video1.png",
+                    thumbnail: ["/galeri/video2.jpeg",],
                     videoUrl: "https://www.youtube.com/embed/jFvncZ6YKGs",
                 },
                 {
                     id: 3,
-                    title: "Sarpras SMAN 1 Kedungreja ",
+                    title: "Profil MAN 4 Bantul",
                     date: "07-03-2025",
-                    thumbnail: "/video2.png",
+                    thumbnail: ["/galeri/video3.jpg",],
                     videoUrl: "https://youtu.be/kcIL1iR1FL4",
                 },
-                {
-                    id: 4,
-                    title: "Profil SMAN 1 KEDUNGREJA",
-                    date: "07-03-2025",
-                    thumbnail: "/video3.png",
-                    videoUrl: "https://youtu.be/M3My0S9h__U",
-                },
+
 
             ],
         },
-
-        direktoriSiswa: [
-            {
-                id: "1",
-                category: "IPA",
-                name: "	DANI AGUNG HERDIANA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa1.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "2",
-                category: "IPA",
-                name: "ALFIN NUR ROHIM",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa2.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "3",
-                category: "IPA",
-                name: "DEA NABILA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa3.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "4",
-                category: "IPA",
-                name: "HEGI KRISNA SUGARA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa4.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "5",
-                category: "IPA",
-                name: "SADAM ARDIANSYAH",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa5.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "6",
-                category: "IPA",
-                name: "ADIMAS PRADANA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa6.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "7",
-                category: "IPA",
-                name: "	DANI AGUNG HERDIANA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa7.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "8",
-                category: "IPA",
-                name: "PUTRI NURUL HAYATI",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa8.jpg",
-                gender: "Perempuan",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "9",
-                category: "IPS",
-                name: "DINDA NURUL FADILAH",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa9.jpg",
-                gender: "Perempuan",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "11 IPS 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "10",
-                category: "IPS",
-                name: " AGUNG HERDIANA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa10.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 IPS 3",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "11",
-                category: "IPS",
-                name: "HELENA NURUL FADILAH",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa11.jpg",
-                gender: "Perempuan",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 IPS 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "12",
-                category: "IPS",
-                name: "	AURELIA  FADLAH",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa12.jpg",
-                gender: "Perempuan",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "12 IPS 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "13",
-                category: "IPS",
-                name: "JULIANA ",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa14.jpg",
-                gender: "Perempuan",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "11 IPS 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "14",
-                category: "IPS",
-                name: "MIRANDA NURUL ",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa8.jpg",
-                gender: "Perempuan",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 IPS 2",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "15",
-                category: "IPS",
-                name: "FAIZ MARZUKI",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa4.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 IPS 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "16",
-                category: "IPS",
-                name: "	HERDIAN",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa6.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 IPS 2",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-
-        ],
-        direktoriSiswaAlumni: [
-            {
-                id: "1",
-                category: "IPA",
-                name: "	DANI AGUNG HERDIANA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa1.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "2",
-                category: "IPA",
-                name: "ALFIN NUR ROHIM",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa2.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "3",
-                category: "IPA",
-                name: "DEA NABILA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa3.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "4",
-                category: "IPA",
-                name: "HEGI KRISNA SUGARA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa4.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "5",
-                category: "IPA",
-                name: "SADAM ARDIANSYAH",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa5.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "6",
-                category: "IPA",
-                name: "ADIMAS PRADANA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa6.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "7",
-                category: "IPA",
-                name: "	DANI AGUNG HERDIANA",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa7.jpg",
-                gender: "Laki-laki",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-            {
-                id: "8",
-                category: "IPA",
-                name: "PUTRI NURUL HAYATI",
-                nis: "19690402 199802 1 001",
-                image: "/siswa/siswa8.jpg",
-                gender: "Perempuan",
-                birthPlace: "Cilacap",
-                birthDate: "04-02-1969",
-                agama: "Islam",
-                kelas: "10 MIPA 1",
-                address: "Desa Tambaksari Kec. Kedungreja",
-            },
-        ],
-
-
-        ekstrakurikuler: [
-            {
-                nama: "Pramuka",
-                jadwal: "Jumat 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-            {
-                nama: "PMR",
-                jadwal: "Kamis 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-            {
-                nama: "Rohis",
-                jadwal: "Selasa 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-            {
-                nama: "Repala",
-                jadwal: "Senin 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-            {
-                nama: "Futsal",
-                jadwal: "Rabu 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-            {
-                nama: "Volly",
-                jadwal: "Senin 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-            {
-                nama: "Badminton",
-                jadwal: "Kamis 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-            {
-                nama: "Taekwondo",
-                jadwal: "Rabu 15:00 - 17:00",
-                kontak: "Ari Wibowo, S.Pd",
-                telepon: "08123456789",
-            },
-        ],
-
-
-        Informasi: {
-            agenda: [
-                {
-                    date: '2025-06-12',
-                    events: [
-                        "Pentas Seni dan Lomba futsal kelas 12 A & B Pukul 11 Siang (siswa berkumpul di AULA)",
-                        "Rapat Osis bersama pak Hidayat kurniawan"
-                    ]
-                },
-                {
-                    date: '2025-07-21',
-                    events: [
-                        "Lomba menyanyi untuk kelas 11 A & B Pukul 11 siang (siswa berkumpul di ruang musik)",
-                        "Rapat Guru dan yayasan"
-                    ]
-                },
-                {
-                    date: '2025-07-22',
-                    events: [
-                        "Sekolah bersih diadakan kerja bakti siswa pukul 12 siang (seluruh siswa mengikuti)",
-                        "Workshop dan penyuluhan mengenai HIV AIDS dari dinas kesehatan"
-                    ]
-                },
-                {
-                    date: '2025-07-23',
-                    events: [
-                        "Pembagian makan siang gratis dari dinas pendidikan"
-                    ]
-                },
-                {
-                    date: '2025-07-24',
-                    events: [
-                        "Pembagian makan siang gratis dari dinas pendidikan"
-                    ]
-                },
-                {
-                    date: '2025-06-09',
-                    events: [
-                        "Pentas Seni dan Lomba Futsal kelas 12 A & B Pukul 11 Siang (siswa berkumpul di AULA)",
-                        "Rapat Osis bersama pak Hidayat kurniawan"
-                    ]
-                }
-            ],
-
-
-
-        },
-
-        videos: [
-            {
-                id: 1,
-                title: "Selamat Hari Guru 2017 SMANKER Jaya",
-                date: "07-03-2025",
-                thumbnail: "/video4.png",
-                videoUrl: "https://www.youtube.com/watch?v=OaNdJqPCegA&t=1s",
-            },
-            {
-                id: 2,
-                title: "Upacara Peringatan Hari Guru",
-                date: "07-03-2025",
-                thumbnail: "/video1.png",
-                videoUrl: "https://www.youtube.com/embed/jFvncZ6YKGs",
-            },
-            {
-                id: 3,
-                title: "Sarpras SMAN 1 Kedungreja ",
-                date: "07-03-2025",
-                thumbnail: "/video2.png",
-                videoUrl: "https://youtu.be/kcIL1iR1FL4",
-            },
-            {
-                id: 4,
-                title: "Profil SMAN 1 KEDUNGREJA",
-                date: "07-03-2025",
-                thumbnail: "/video3.png",
-                videoUrl: "https://youtu.be/M3My0S9h__U",
-            },
-
-        ],
-        albums: [
-            {
-                id: 1,
-                date: "08/16/2022",
-                title: "Galeri 2022",
-                photoCount: 3,
-                photos: ["/news1.png", "/news2.jpg", "/news3.jpg"],
-            },
-            {
-                id: 2,
-                date: "08/16/2022",
-                title: "Twibbon",
-                photoCount: 3,
-                photos: ["/news1.png", "/news2.jpg", "/news3.jpg"],
-            },
-            {
-                id: 3,
-                date: "08/16/2022",
-                title: "Semarak Peringatan HUT RI Ke-75",
-                photoCount: 3,
-                photos: ["/news1.png", "/news2.jpg", "/news3.jpg"],
-            },
-            {
-                id: 4,
-                date: "08/16/2022",
-                title: "Semarak Peringatan HUT RI Ke-75",
-                photoCount: 8,
-                photos: ["/news1.png", "/news2.jpg", "/news3.jpg", "/news1.png", "/news2.jpg", "/news3.jpg"],
-            },
-
-        ]
-
     },
 
 
@@ -1448,30 +952,8 @@ export default createStore({
         getLayananContent: (state) => state.layananContent,
         getGaleriContent: (state) => state.galeriContent,
         getFotoPeristiwaById: (state) => (id) => state.galeriContent.FotoPeristiwa.find((album) => album.id === id),
-        getKalenderAkademik: (state) => state.guruContent.kalender,
-        getDirektoriGuru: (state) => state.guruContent.direktoriGuru,
-        getGuruById: (state) => (id) => {
-            return state.guruContent.direktoriGuru.find((guru) => guru.id === id);
-        },
-        getAlbums: (state) => state.albums,
-        getAlbumById: (state) => (id) => state.albums.find((album) => album.id === id),
-        getVideos: (state) => state.videos,
-        getVideoById: (state) => (id) => state.videos.find((video) => video.id === id),
-
-        getAgenda: (state) => state.Informasi.agenda,
-
-        getInformasiSekolah: (state) => state.Informasi,
-        getSiswaById: (state) => (id) => {
-            return state.direktoriSiswa.find((siswa) => siswa.id === id);
-        },
-        getDirektoriSiswa: (state) => state.direktoriSiswa,
-
-        getSiswaAlumniById: (state) => (id) => {
-            return state.direktoriSiswaAlumni.find((siswa) => siswa.id === id);
-        },
-        getDirektoriSiswaAlumni: (state) => state.direktoriSiswaAlumni,
+        getVideoById: (state) => (id) => state.galeriContent.videos.find((video) => video.id === id),
         getSambutan: state => state.sambutan,
-        getEkstrakurikuler: state => state.ekstrakurikuler,
 
 
     },

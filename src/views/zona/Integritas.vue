@@ -100,9 +100,9 @@ const goToDetail = (index) => {
           </p>
           <button
             @click="goToDetail(idx)"
-            class="mt-auto text-sm font-semibold py-2 px-4 border border-green-600 text-green-600 rounded hover:bg-green-600 hover:text-white transition"
+            class="mt-auto text-sm font-semibold py-2 px-4 border border-green-500 text-green-500 rounded hover:bg-green-500 hover:text-white transition"
           >
-            Lihat Selengkapnya →
+            Lihat Selengkapnya 
           </button>
         </div>
       </div>

@@ -47,7 +47,15 @@ const closeZoom = () => {
 
 <template>
   <div class="container mx-auto px-6 py-8">
-    <h1 class="text-3xl font-bold text-blue-800 mb-6">
+    <button
+      @click="goBack"
+      class="flex items-center gap-2 bg-green-500 hover:bg-00 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 mb-6"
+      type="button"
+    >
+      <i class="fas fa-arrow-left"></i>
+      Kembali ke Daftar prestasi
+    </button>
+    <h1 class="text-3xl font-bold text-green-500 mb-6">
       {{ album?.title }}
     </h1>
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
@@ -67,14 +75,14 @@ const closeZoom = () => {
         :disabled="currentPage === 1"
         @click="setPage(currentPage - 1)"
       >
-      <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-left"></i>
       </button>
       <button
         v-for="page in totalPages"
         :key="page"
         class="px-3 py-1 rounded border"
         :class="{
-          'bg-blue-800 text-white': currentPage === page,
+          'bg-green-500 text-white': currentPage === page,
           'bg-white text-gray-700': currentPage !== page,
         }"
         @click="setPage(page)"
@@ -90,26 +98,23 @@ const closeZoom = () => {
         <i class="fas fa-chevron-right"></i>
       </button>
     </div>
-    <div class="flex justify-center">
-      <button @click="goBack" class="bg-blue-800 text-white px-4 py-2 rounded">
-        Kembali
-      </button>
-    </div>
+
     <!-- Modal Zoom -->
     <div
       v-if="showZoom"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 transition-opacity duration-300"
       @click.self="closeZoom"
     >
       <img
         :src="zoomImg"
-        class="max-w-4xl max-h-[80vh] rounded shadow-lg border-4 border-white"
+        class="w-[800px] max-w-[95vw] h-auto object-contain rounded shadow-lg"
       />
+
       <button
         class="absolute top-6 right-6 bg-white text-black rounded-full p-2 text-xl font-bold"
         @click="closeZoom"
       >
-      <i class="fa-solid fa-x"></i>
+        <i class="fa-solid fa-x"></i>
       </button>
     </div>
   </div>

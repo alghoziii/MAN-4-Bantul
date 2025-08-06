@@ -42,7 +42,7 @@ const evidenceList = computed(() => store.getters.getZonaContent.evidenceZona);
           <a
             :href="item.link"
             target="_blank"
-            class="text-green-600 font-semibold hover:underline text-sm md:text-base"
+            class="text-black font-semibold hover:text-green-500 text-sm md:text-base"
           >
             Lihat Dokumen
           </a>
