@@ -9,9 +9,9 @@ const goToLokasi = () => {
 </script>
 
 <template>
-  <footer class="bg-green-500 text-white py-10 mt-10">
+  <footer class="bg-green-500 text-white py-6 mt-10">
     <div
-      class="max-w-screen-xl mx-auto px-1 py-4 flex flex-wrap justify-between gap-4"
+      class="max-w-screen-xl mx-auto px-1  flex flex-wrap justify-between gap-4"
     >
       <!-- Bagian kiri: Logo + Info Sekolah -->
       <div
@@ -130,12 +130,14 @@ const goToLokasi = () => {
       </div>
 
       <!-- Copyright -->
-      <div class="w-full border-t border-white mt-14  pt-4 text-center text-sm">
+      <div class="w-full border-t border-white mt-14  pt-6 text-center text-sm">
         © Copyright MAN 4 Bantul Yogyakarta
       </div>
     </div>
   </footer>
 </template>
+
+
 
 <style scoped>
 </style>
