@@ -43,8 +43,9 @@
           </p>
         </div>
         <a
-          href="https://maps.app.goo.gl/xxxxxx"
+          href="https://www.google.com/maps/place/MAN+4+Bantul/@-7.8059424,110.4055978,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a57435c276bcf:0x4e7e3c3eab7c3e5c!8m2!3d-7.8059424!4d110.4081727!16s%2Fg%2F11cjw7lgxs?entry=ttu"
           target="_blank"
+          rel="noopener noreferrer"
           class="inline-block bg-green-500 text-white px-4 py-2 rounded-md shadow hover:bg-green-700 transition"
         >
           Buka di Google Maps
