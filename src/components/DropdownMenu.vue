@@ -14,7 +14,6 @@ const isActive = computed(() => {
   return route.path.startsWith(props.path);
 });
 </script>
-
 <template>
   <div class="group relative">
     <button
@@ -30,14 +29,27 @@ const isActive = computed(() => {
     >
       <div class="absolute h-2 w-full bg-transparent" style="top: -8px"></div>
 
-      <router-link
-        v-for="item in items"
-        :key="item.id"
-        :to="item.route"
-        class="block px-4 py-2 hover:bg-green-500  hover:text-white transition-colors duration-200"
-      >
-        {{ item.title }}
-      </router-link>
+      <template v-for="item in items" :key="item.id">
+        <!-- eksternal link -->
+        <a
+          v-if="item.route.startsWith('http')"
+          :href="item.route"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block px-4 py-2 hover:bg-green-500 hover:text-white transition-colors duration-200"
+        >
+          {{ item.title }}
+        </a>
+
+        <!-- internal route -->
+        <router-link
+          v-else
+          :to="item.route"
+          class="block px-4 py-2 hover:bg-green-500 hover:text-white transition-colors duration-200"
+        >
+          {{ item.title }}
+        </router-link>
+      </template>
     </div>
   </div>
 </template>

@@ -19,7 +19,7 @@ export default createStore({
                 { id: 3, title: "5 Nilai Budaya Kerja", route: "/zona/budaya-kerja" },
             ],
             layananMenu: [
-                { id: 1, title: "PTSP Online", route: "/layanan/layanan-ptsp" },
+                { id: 1, title: "PTSP Online", route: "https://ptsponline.man4bantul.sch.id/" },
                 { id: 2, title: "Maklumat Standar Layanan", route: "/layanan" },
             ],
             galeriMenu: [
@@ -53,21 +53,21 @@ export default createStore({
                 description:
                     "Menyediakan layanan konsultasi untuk siswa terkait permasalahan sekolah, perilaku, dan bimbingan belajar.",
                 icon: "fas fa-headset",
-                link: "/layanan/konsultasi",
+                link: "https://wa.wizard.id/",
             },
             {
                 title: "PPDB",
                 description:
                     "Informasi dan panduan mengenai proses pendaftaran siswa baru ke sekolah.",
                 icon: "fas fa-graduation-cap",
-                link: "/layanan/ppdb",
+                link: "http://ppdb.man4bantul.sch.id/",
             },
             {
                 title: "Survey Layanan Publik",
                 description:
                     "Media untuk mengukur tingkat kepuasan masyarakat terhadap layanan yang diberikan oleh sekolah atau instansi terkait.",
                 icon: "fas fa-book-open-reader",
-                link: "/layanan/survey",
+                link: "https://skm.man4bantul.sch.id/",
             },
         ],
         berita: [

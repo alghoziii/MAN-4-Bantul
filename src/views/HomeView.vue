@@ -196,12 +196,14 @@ function goToDetailPrestasi(index) {
               <h3 class="text-lg font-bold mb-2">{{ item.title }}</h3>
               <p class="text-sm mb-6">{{ item.description }}</p>
             </div>
-            <router-link
-              :to="item.link"
+            <a
+              :href="item.link"
+              target="_blank"
+              rel="noopener noreferrer"
               class="text-sm font-semibold hover:text-yellow-300 transition-colors"
             >
               Baca Selengkapnya →
-            </router-link>
+            </a>
           </div>
         </div>
       </div>
@@ -283,7 +285,7 @@ function goToDetailPrestasi(index) {
                 </p>
 
                 <!-- Read More Button with border -->
-                <div class="mt-auto pt-4  border-gray-200">
+                <div class="mt-auto pt-4 border-gray-200">
                   <button
                     class="z font-semibold hover:text-green-500 transition-colors flex items-center justify-end w-full"
                     @click="
