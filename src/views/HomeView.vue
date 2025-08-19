@@ -154,7 +154,7 @@ function goToDetailPrestasi(index) {
           class="absolute bottom-0 right-0 w-28 h-28 bg-green-100 rounded-full -z-10"
         ></div>
         <img
-          src="/background/kepala-sekolah.png"
+          src="/kepala-sekolah.png"
           alt="Kepala Sekolah"
           class="w-54 h-74 object-cover object-top rounded-lg shadow-md border"
         />

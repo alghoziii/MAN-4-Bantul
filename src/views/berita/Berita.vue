@@ -94,7 +94,9 @@ const setPage = (page) => {
     </h1>
 
     <!-- Search + Category + Sort -->
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6"
+    >
       <!-- Search -->
       <div class="w-full md:w-1/3 relative">
         <input
@@ -148,12 +150,16 @@ const setPage = (page) => {
           <p class="text-sm text-gray-600 flex-1 mb-2">
             {{ item.description }}
           </p>
-          <button
-            @click="goToDetail(idx)"
-            class="mt-auto text-sm font-semibold py-2 px-4 border border-green-500 text-green-500 rounded hover:bg-green-500 hover:text-white transition"
-          >
-            Lihat Berita
-          </button>
+
+          <div class="mt-auto pt-4 border-gray-200">
+            <button
+              @click="goToDetail(idx)"
+              class="z font-semibold hover:text-green-500 transition-colors flex items-center justify-end w-full"
+            >
+              Lihat Selengkapnya
+              <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

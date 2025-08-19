@@ -37,7 +37,7 @@ const deskripsi = computed(
         panjang perjuangan yang diprakarsai oleh :
       </h2>
       <img
-        src="/background/sejarah.png"
+        src="/sejarah.png"
         alt="Tokoh Sejarah"
         class="mx-auto mt-12"
       />
